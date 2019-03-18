@@ -1,0 +1,225 @@
+main {
+    font-family: monospace;
+    font-size: 130%;
+}
+
+body {
+    background: rgb(66, 170, 240);
+    margin: 0 20% 5% 20%;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    right: 0;
+}
+
+#footerid {
+    background: rgb(35, 110, 223);
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    position: fixed;
+    margin-bottom: 0;
+    padding: 10px 0;
+    border: 2px solid black;
+}
+
+h1, h2 {
+    text-decoration: underline;
+}
+
+.titel {
+    font-size: 50px;
+}
+
+code {
+    background: grey;
+    font-style: italic;  
+    border: 2px solid black;
+    display: block;
+}
+
+p a {
+    font-weight: bold;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+  
+.navbar a {
+    float: none;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button,
+when the dropdown content is shown */
+.dropdown:hover .dropbtn0 {
+    background-color: rgb(170, 0, 0);
+}
+
+.dropdown:hover .dropbtn1 {
+    background-color: rgb(22, 56, 129);
+}
+
+.dropdown:hover .dropbtn2 {
+    background-color: rgb(91, 5, 126);
+}
+
+.navdropdown {
+    float: right;
+}
+
+/* Dropdown Button 0 */
+  .dropbtn0 {
+    background-color: rgb(219, 13, 13);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Dropdown Button 1 */
+.dropbtn1 {
+    background-color: rgb(53, 102, 207);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Dropdown Button 2 */
+.dropbtn2 {
+    background-color: rgb(125, 26, 190);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+nav {
+    margin-right: 60px;
+}
+
+.dropdown-content0 {
+    display: none;
+    position: absolute;
+    background-color: rgb(167, 11, 11);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: rgb(13, 30, 129);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: rgb(209, 132, 43);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.B1 {
+    max-width: 800px;
+}
+
+@media (max-width: 1100px) {
+    body {
+        margin: 0 10% 5% 10%;
+    }
+    .B1 {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 2px 10px 2px 2px;
+        text-align: left;
+    }
+
+    body {
+        font-size: 60%;
+        margin: 0 3% 6% 3%;
+    }
+
+    .titel {
+        font-size: 30px;
+    }
+
+    .dropbtn0 {
+        font-size: 10px;
+        padding: 7px 4px;
+    }
+
+    .dropbtn1 {
+        font-size: 10px;
+        padding: 7px 4px;
+    }
+
+    .dropbtn2 {
+        font-size: 10px;
+        padding: 7px 4px;
+    }
+
+    .B1 {
+        max-width: 500px;
+    }
+}
