@@ -43,7 +43,7 @@ code {
     display: block;
 }
 
-p a {
+p a, dd a {
     font-weight: bold;
 }
 
