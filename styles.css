@@ -43,6 +43,10 @@ code {
     display: block;
 }
 
+#underline {
+    text-decoration: underline;
+}
+
 p a, dd a {
     font-weight: bold;
 }
