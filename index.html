@@ -19,6 +19,7 @@
                     <a href="#01">Nach Oben</a>
                     <a href="#02">Einleitung</a>
                     <a href="#03">Arbeitsumgebung und Tools</a>
+                    <a href="#03.5">D.O.M.</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -27,8 +28,6 @@
                     <a href="#04">Was ist das?</a>
                     <a href="#05">Syntax</a>
                     <a href="#06">Funktionen</a>
-                    <a href="#07"></a>
-                    <a href="#08"></a>
                 </div>
             </div>
             <div class="dropdown">
@@ -51,11 +50,12 @@
             Einleitung
         </h1>
         <p>
-            Wenn man die Grundlagen von <a href="https://robinehrbar.github.io/lerndoku-101/">HTML & CSS</a> beherrscht,
+            Wenn man die <a href="https://robinehrbar.github.io/lerndoku-101/">Grundlagen von HTML & CSS</a> beherrscht,
             kann man sich an das, für Fortgeschrittene, PHP und JavaScript machen. Diese zwei Skriptsprachen bringen
             diverse Vorteile für die Interaktion mit Webseiten. Der wesentlichste Unterschied zwischen PHP und
-            JavaScript ist, dass JavaScript auf dem Computer des Benutzers, mithilfe eines Browsers ausgeführt wird,
-            wohingegen PHP auf einem Webserver läuft.
+            JavaScript ist, dass JavaScript auf dem Computer des Benutzers, mithilfe eines Browsers ausgeführt
+            wird(clientseitig),
+            wohingegen PHP auf einem Webserver läuft(serverseitig).
         </p>
         <h2 id="03">
             Arbeitsumgebung und Tools
@@ -108,6 +108,16 @@
                 </dd>
             </dl>
         </p>
+        <h2 id="03.5">
+            D.O.M.
+        </h2>
+        <p>
+            Ist die Abkürzung für <b> Document Object Model </b> und es ist eine Methode, welche den Aufbau
+            aller HTML-Dokumente als Baumstruktur darstellt. Jeder "Ast" stellt somit zum Beispiel einen Absatz oder
+            einen Titel dar. Für Browser bildet dies einen wichtigen Baustein für dynamische Webseiten.
+            Ganz gut sehen kann man es im Chrome Developer Tool. Mit Windows öffnet man dies mit [F12], bei
+            Linux mit [Ctrl]+[Shift]+[J] und mit Apple geht es mit [⌘]+[Optionstaste]+[J].
+        </p>
         <h1 id="04">
             PHP erklärt
         </h1>
@@ -149,13 +159,7 @@
                 </dt>
                 <dd>
                     Mit diesem Befehl kann das aktuelle Datum angegeben werden.
-                </dd> <br>
-                <dt>
-                    <code> <b> xy </b> </code>
-                </dt>
-                <dd>
-                    xy
-                </dd> <br>
+                </dd>
             </dl>
         </p>
         <h1 id="09">
@@ -167,7 +171,7 @@
             mit Java verwechseln, dies ist etwas komplett anderes und darum soll es nicht gehen. Um wieder auf
             JavaScript zurückzukommen, JavaScript ist ebenfalls ein Skriptsprache und sie wurde ebenfalls in 1995
             entwickelt. JavaScript hatte die Absicht Websiten dynamischer zu machen, die selbe Aufgabe hat es auch heute
-            noch. Das einzige was heute noch dazugekommen ist, ist dass man JS auch auf Servern und Microcontrollern
+            noch. Das einzige was heute noch dazugekommen ist, ist dass man JavaScript auch auf Servern und Microcontrollern
             vorfinden kann. <br> <br> JavaScript wurde früher hauptsächlich clientseitig eingesetzt. JavaScript
             ermöglicht aber beispielsweise mit dem Framework Node.js und als JScript bzw. JScript.NET auch serverseitige
             Anwendungen. <br> <br> Die Sprache wird auch als Skriptsprache für Spiele und Anwendungsprogramme
@@ -233,7 +237,7 @@
                 </li>
             </ul>
         </p>
-        <h2>
+        <h2 id="12">
             Praxis
         </h2>
         <p>
@@ -263,7 +267,8 @@
                     Man kann mit normalen Zahlen sowie mit Variablen rechnen. Es gibt einerseits die üblichen Operatoren
                     (+,-,* und /), aber es gibt auch weniger bekannte Zeichen wie zum Beispiel %. Mit % kann man den
                     Rest einer Division ausrechnen, hier ein Beispiel dazu:
-                    <code> var x = 9; <br> var y = 4; <br> var z = x % y; </code> Dies würde jetzt z = 1 ausgeben weil 9
+                    <code> var x = 9; <br> var y = 4; <br> var z = x % y; </code> Dies würde jetzt <b> z = 1 </b>
+                    ausgeben weil 9
                     durch 4 = 2 gibt und <b> Rest 1 </b> ist.
                 </dd>
                 <dt>
@@ -274,24 +279,32 @@
                     jeden Wert eine Variable erstellen. Man kann die einzelnen Werte eines Arrays dann mit einer Index
                     Nummer abrufen. Beispiel: Wir wollen einen Früchtekorb erstellen, darin soll es Äpfel, Bananen und
                     Trauben haben, folglich würde die Syntax so aussehen:
-                    <code> var Früchtekorb = ["Apfel", "Banane", "Traube"]; </code> Jetzt kann man die einzelen Werte abrufen,
+                    <code> var Früchtekorb = ["Apfel", "Banane", "Traube"]; </code> Jetzt kann man die einzelen Werte
+                    abrufen,
                     indem man die ensprechende Index Nummer anspricht. Man muss darauf achten, dass der erste Eintrag 0
                     ist, aber danach wird normal gezählt. Also bei unserem Beispiel wäre Apfel = 0, Banane = 1 und
-                    Traube = 2. Den Wert Banane kann man jetzt mit folgender Syntax ausgeben: <code> Früchtekorb[1]; </code>
-                </dd>
-                <dt>
-                    <b>xy</b>
-                </dt>
-                <dd>
-                    xy
+                    Traube = 2. Den Wert Banane kann man jetzt mit folgender Syntax ausgeben:
+                    <code> Früchtekorb[1]; </code>
                 </dd>
             </dl>
             <br> Da man noch so viel weiteres mit JavaScript machen kann und Alles hier aufzuschreiben sämtliche
             Rahmen sprengen würde, verlinke ich <a target="_blank"
-                href="https://www.w3schools.com/js/default.asp">HIER</a>
-            eine ziemlich gute Übersicht von Befehlen von w3schools. Sein angeeignetes Wissen kann man <a
-                target="_blank" href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=JavaScript">HIER</a> prüfen
+                href="https://www.w3schools.com/js/default.asp">hier</a>
+            eine ziemlich gute Übersicht von Befehlen von w3schools. Sein angeeignetes Wissen kann man mit diesem <a
+                target="_blank" href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=JavaScript">Test</a> prüfen
             lassen.
+        </p>
+        <h1>
+            jQuery
+        </h1>
+        <p>
+            jQuery ist eine kostenfreie JavaScript-Bibliothek, wessen Ziel es ist, das Navigieren und Manipulieren, mit
+            dem <a href="#03.5">D.O.M.</a>, zu vereinfachen. Ebenfalls ist jQuery die meistverwendete
+            JavaScript-Bibliothek, ungefähr jede zweite Webseite nutzt jQuery (Stand: 3. September 2012.) und sogar 70%
+            der 10'000 meistbesuchten Webseiten haben Anfangs 2018 jQuery im Code. <br> Der Erfinder von jQuery ist John
+            Resig, dieser hat sich zwar inzwischen aus der aktiven Entwicklungsarbeit zurückgezogen und diese an das
+            jQuery Team übergeben, aber dort arbeitet er weiterhin als Ehrenmitglied und selbstverständlich kann er auch
+            als Experte aushelfen.
         </p>
     </main>
     <footer id="footerid">

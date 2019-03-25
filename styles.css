@@ -1,11 +1,14 @@
 main {
-    font-family: monospace;
+    font-family: helvetica;
     font-size: 130%;
 }
 
 body {
     background: rgb(66, 170, 240);
     margin: 0 20% 5% 20%;
+    padding: 2%;
+    box-shadow: 0px 0px 35px 35px rgba(62,85,230,1);
+    border: 2px solid black;
 }
 
 header {
@@ -92,7 +95,7 @@ display: block;
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgb(209, 209, 209);
 }
 
 /* Show the dropdown menu on hover */
@@ -107,7 +110,7 @@ when the dropdown content is shown */
 }
 
 .dropdown:hover .dropbtn1 {
-    background-color: rgb(22, 56, 129);
+    background-color: rgb(35, 143, 31);
 }
 
 .dropdown:hover .dropbtn2 {
@@ -124,16 +127,16 @@ when the dropdown content is shown */
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
+    border: 2px solid black;
 }
 
 /* Dropdown Button 1 */
 .dropbtn1 {
-    background-color: rgb(53, 102, 207);
+    background-color: rgb(29, 173, 0);
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
+    border: 2px solid black;
 }
 
 /* Dropdown Button 2 */
@@ -142,7 +145,7 @@ when the dropdown content is shown */
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
+    border: 2px solid black;
 }
 
 nav {
