@@ -28,6 +28,7 @@
                     <a href="#04">Was ist das?</a>
                     <a href="#05">Syntax</a>
                     <a href="#06">Funktionen</a>
+                    <a href="#07">Validierung</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -38,6 +39,7 @@
                     <a href="#11">Verwendung</a>
                     <a href="#12">Praxis</a>
                     <a href="#13">jQuery</a>
+                    <a href="#14">jQuery Einsatz</a>
                 </div>
             </div>
         </nav>
@@ -68,7 +70,7 @@
                     Editor
                 </dt>
                 <dd>
-                    <b> Visual Studio Code </b> erleichtert das schreiben mit HTML, CSS, PHP und JS erheblich.
+                    <b> Visual Studio Code </b> erleichtert das Schreiben mit HTML, CSS, PHP und JS erheblich.
                 </dd>
                 <dt>
                     Browser
@@ -95,8 +97,8 @@
                     (Grafiken)
                 </dt>
                 <dd>
-                    <b> Adobe Photoshop </b> ist leider kostenpflichtig, ist aber auch nicht zwingend notwendig den <b>
-                        GIMP </b> kann das Wichtigste auch und ist bereits vorinstalliert bei neueren Windows-Versionen.
+                    <b> Adobe Photoshop </b> ist leider kostenpflichtig, ist aber auch nicht zwingend notwendig den
+                    <b>GIMP</b> kann das Wichtigste auch und ist bereits vorinstalliert bei neueren Windows-Versionen.
                 </dd>
                 <dt>
                     Wissen
@@ -162,17 +164,97 @@
                 </dd>
             </dl>
         </p>
+        <h2 id="07">
+            Validierung
+        </h2>
+        <p>
+            Bevor man ein Formular mit PHP auswerten kann, müssen erstmal die Werte von einem HTML übernommen werden. Um
+            sicherzustellen das diese auch sinngetreu sind, gibt es die Validierung. Mit der Validierung kann man Werte
+            nach ihrem Inhalt prüfen und schauen ob sie die festgelegten Erwartungen erfüllen. Man kann dadurch invalide
+            Werte ablehnen und darauf folgend den Benutzer dazu auffordern, die invaliden Felder nochmals auszufüllen.
+            <br> <br> Das bewerkstelligen kann man (für E-Mail) mit einem <code> type="email" </code> Attribut. <br>
+            Auch
+            wichtig ist das <code> required="required" </code> Attribut, um das Feld "obligatorisch" zu machen. <br>
+            <br> Es
+            gibt auch noch ähnliche Möglichkeiten wie das mit der E-Mail, den meiner Meinung nach wichtigsten Bereich
+            kann man mit folgenden Methoden abdecken: <br>
+            <ul>
+                <li>
+                    a — Muss ein kleines a sein. (nicht b, nicht aa, etc.)
+                </li>
+                <li>
+                    abc — Muss abc sein.
+                </li>
+                <li>
+                    a* — Muss a null mal, einmal oder mehrmals sein.
+                </li>
+                <li>
+                    a+ — Muss a einmal oder mehrmals sein.
+                </li>
+                <li>
+                    [^a] — Muss ein Buchstabe ausser a sein.
+                </li>
+                <li>
+                    a|b — Muss a oder b sein.
+                </li>
+                <li>
+                    [abc] — Muss a, b oder c sein.
+                </li>
+                <li>
+                    [^abc] — Muss ein Buchstabe ausser a, b und c sein.
+                </li>
+                <li>
+                    [a-z] — Muss ein Buchstabe zwischen a und z sein, nur Kleinbuchstaben. (Man kann [A-Za-z] für Klein-
+                    und Grossbuchstaben benutzen und [A-Z] für nur Grossbuchstaben)
+                </li>
+                <li>
+                    a.c — Muss a sein, gefolgt von einem beliebigen Buchstaben und zuletzt muss ein c sein.
+                </li>
+                <li>
+                    a{5} — Muss a fünfmal sein.
+                </li>
+                <li>
+                    a{5,7} — Muss a fünf- bis siebenmal sein.
+                </li>
+                <li>
+                    [ -] — Muss ein Leerzeichen oder ein Bindestrich sein.
+                </li>
+                <li>
+                    [0-9] — Muss eine Zahl zwischen 0 und 9 sein.
+                </li>
+                <li>
+                    [Ll].*k — Muss mit einem grossen L oder kleinen l anfangen, danach müssen 0,1 oder mehrere beliebige
+                    Buchstaben sein, und zum Schluss muss ein kleines k kommen.
+                </li>
+                <li>
+                    [A-Z][A-Za-z' -]+ — Muss ein einzelner Grossbuchstabe sein, gefolgt von einem oder mehreren Gross-
+                    oder Kleinbuchstaben, einem Schrägstrich, einem Apostroph oder einem Leerzeichen. Das könnte für die
+                    Validierung von Vor- und Nachnamen gut sein.
+                </li>
+                <li>
+                    [0-9]{3}[ -][0-9]{3}[ -][0-9]{2}[ -][0-9]{2} — Und so einfach macht man eine Schweizer
+                    Telefonnummer. Drei Zahlen gefolgt von einem Leerzeichen oder Bindestrich, danach nochmals 3 Zahlen
+                    und ein Abstand oder ein Bindestrich und zuletzt dann noch zweimal zwei Zahlen zwischen 0 und 9,
+                    diese zwei Blöcke sind auch wieder getrennt durch ein Leerzeichen oder ein Bindestrich. Man
+                    müsste das noch ein wenig komplizierter machen, da manche Leute mit ihrer Landesvorwahl beginnen,
+                    aber dies soll nur ein Beispiel sein.
+                </li>
+            </ul>
+            Immer das was vor dem Bindestrich ist, ist der Attributwert für das <code> required pattern="" </code>
+            Attribut.
+        </p>
+
         <h1 id="09">
             JS erklärt
         </h1>
         <p>
             Von <b>JavaScript(JS)</b> hat sicher jeder schon mal gehört, jedoch sollte man JavaScript auf gar keinen
             Fall
-            mit Java verwechseln, dies ist etwas komplett anderes und darum soll es nicht gehen. Um wieder auf
-            JavaScript zurückzukommen, JavaScript ist ebenfalls ein Skriptsprache und sie wurde ebenfalls in 1995
-            entwickelt. JavaScript hatte die Absicht Websiten dynamischer zu machen, die selbe Aufgabe hat es auch heute
-            noch. Das einzige was heute noch dazugekommen ist, ist dass man JavaScript auch auf Servern und Microcontrollern
-            vorfinden kann. <br> <br> JavaScript wurde früher hauptsächlich clientseitig eingesetzt. JavaScript
+            mit Java verwechseln, dies ist etwas komplett Anderes und darum soll es nicht gehen. Um wieder auf
+            JavaScript zurückzukommen, JavaScript ist ebenfalls eine Skriptsprache und sie wurde ebenfalls in 1995
+            entwickelt. JavaScript hatte die Absicht Webseiten dynamischer zu machen, die selbe Aufgabe hat es auch heute
+            noch. Das einzige was heute noch dazugekommen ist, ist, dass man JavaScript auch auf Servern und
+            Microcontrollern vorfinden kann. <br> <br> JavaScript wurde früher hauptsächlich clientseitig eingesetzt. JavaScript
             ermöglicht aber beispielsweise mit dem Framework Node.js und als JScript bzw. JScript.NET auch serverseitige
             Anwendungen. <br> <br> Die Sprache wird auch als Skriptsprache für Spiele und Anwendungsprogramme
             eingesetzt. Dies ist weil der Sprachkern nur wenige Objekte enthält, deswegen kann das Skript relativ klein
@@ -265,11 +347,24 @@
                 </dt>
                 <dd>
                     Man kann mit normalen Zahlen sowie mit Variablen rechnen. Es gibt einerseits die üblichen Operatoren
-                    (+,-,* und /), aber es gibt auch weniger bekannte Zeichen wie zum Beispiel %. Mit % kann man den
+                    (+,-,* und /), hier sind ein paar Beispiele:
+                    <code> var a = 5; <br> var b = 12; <br> var c = a + a + b; </code> Die Variable <b>c</b> würde jetzt
+                    <b>22</b>
+                    ergeben. <br> <br> Oder Division:
+                    <code> var variable1 = 20; <br> var variable2 = 4; <br> var resultat = variable1 / variable2; </code>
+                    Die Variable <b>resultat</b> ist in diesem Falle gleich <b>5.</b> <br> <br> Zuletzt möchte ich noch
+                    zeigen das man auch
+                    verschiedene Zeichen kombinieren kann, dabei muss man aber die Punkt-Vor-Strich Regel beachten. Wenn
+                    man dies umgehen möchte muss man mit Klammern arbeiten.
+                    <code> var x = 2; <br> var y = 6; <br> var z = 3; <br> var resultat1 = x + y * z; <br> var resultat2 = (x + y) * z; </code>
+                    Jeder der in der Primarschule aufgepasst hat kann jetzt sagen, weshalb sich die beiden Resultate
+                    unterscheiden. Nämlich ist <b>resultat1, 20</b> und <b>resultat2</b> ist gleich <b>24.</b> <br> <br>
+                    Aber es gibt auch weniger bekannte Zeichen wie zum Beispiel %(auch Modulo genannt). Mit % kann man
+                    den
                     Rest einer Division ausrechnen, hier ein Beispiel dazu:
                     <code> var x = 9; <br> var y = 4; <br> var z = x % y; </code> Dies würde jetzt <b> z = 1 </b>
                     ausgeben weil 9
-                    durch 4 = 2 gibt und <b> Rest 1 </b> ist.
+                    durch 4 = 2 gibt und Rest 1 ist.
                 </dd>
                 <dt>
                     <b>Arrays</b>
@@ -279,9 +374,9 @@
                     jeden Wert eine Variable erstellen. Man kann die einzelnen Werte eines Arrays dann mit einer Index
                     Nummer abrufen. Beispiel: Wir wollen einen Früchtekorb erstellen, darin soll es Äpfel, Bananen und
                     Trauben haben, folglich würde die Syntax so aussehen:
-                    <code> var Früchtekorb = ["Apfel", "Banane", "Traube"]; </code> Jetzt kann man die einzelen Werte
+                    <code> var Früchtekorb = ["Apfel", "Banane", "Traube"]; </code> Jetzt kann man die einzelnen Werte
                     abrufen,
-                    indem man die ensprechende Index Nummer anspricht. Man muss darauf achten, dass der erste Eintrag 0
+                    indem man die entsprechende Index Nummer anspricht. Man muss darauf achten, dass der erste Eintrag 0
                     ist, aber danach wird normal gezählt. Also bei unserem Beispiel wäre Apfel = 0, Banane = 1 und
                     Traube = 2. Den Wert Banane kann man jetzt mit folgender Syntax ausgeben:
                     <code> Früchtekorb[1]; </code>
@@ -294,7 +389,7 @@
                 target="_blank" href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=JavaScript">Test</a> prüfen
             lassen.
         </p>
-        <h1>
+        <h1 id="13">
             jQuery
         </h1>
         <p>
@@ -304,7 +399,32 @@
             der 10'000 meistbesuchten Webseiten haben Anfangs 2018 jQuery im Code. <br> Der Erfinder von jQuery ist John
             Resig, dieser hat sich zwar inzwischen aus der aktiven Entwicklungsarbeit zurückgezogen und diese an das
             jQuery Team übergeben, aber dort arbeitet er weiterhin als Ehrenmitglied und selbstverständlich kann er auch
-            als Experte aushelfen.
+            als Entwickler und somit Fachexperte aushelfen.
+        </p>
+        <h2 id="14">
+            jQuery Einsatzgebiet
+        </h2>
+        <p>
+            <ul>
+                <li>
+                    Elementselektion im Document Object Model die weitgehend den CSS-3-Selektoren entspricht
+                </li>
+                <li>
+                    Document-Object-Model-Manipulation
+                </li>
+                <li>
+                    Erweitertes Event-System
+                </li>
+                <li>
+                    Animationen und Effekte
+                </li>
+                <li>
+                    Ajax-Funktionalitäten
+                </li>
+                <li>
+                    Generelle Vereinfachung von JavaScript, da die Syntax kürzer ist(teilweise enorm viel kürzer)
+                </li>
+            </ul>
         </p>
     </main>
     <footer id="footerid">
