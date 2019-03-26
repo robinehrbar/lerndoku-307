@@ -45,6 +45,11 @@ h1, h2 {
     font-size: 50px;
 }
 
+/* Bilder sollen 75% der Breite einnehmen */
+img {
+    width: 75%;
+}
+
 /* Design für Code */
 code {
     background: rgb(0, 0, 0);
@@ -173,6 +178,7 @@ th {
     background: rgb(76, 125, 240);
     border: 2px solid black;
     padding: 2% 0;
+    width: 50%;
 }
 
 /* Tabellenfelder Design */
@@ -180,6 +186,7 @@ td {
     padding: 2%;
     border: 2px solid black;
     background: rgb(58, 148, 247);
+    text-align: center;
 }
 
 /* Media-Query 1100px */
@@ -240,3 +247,5 @@ td {
         max-width: 500px;
     }
 }
+
+/* test */
