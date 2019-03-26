@@ -127,7 +127,7 @@ display: block;
     box-shadow: 9px -9px 10px -4px rgb(10, 129, 129);
 }
 
-/* Dropdown Button 0 Design */
+/* Buttons Design */
   .dropbtn0 {
     background-color: rgb(219, 13, 13);
     color: white;
@@ -136,8 +136,6 @@ display: block;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(219, 13, 13);
 }
-
-/* Dropdown Button 1 Design */
 .dropbtn1 {
     background-color: rgb(29, 173, 0);
     color: white;
@@ -146,8 +144,6 @@ display: block;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(29, 173, 0);
 }
-
-/* Dropdown Button 2 Design */
 .dropbtn2 {
     background-color: rgb(125, 26, 190);
     color: white;
@@ -156,8 +152,6 @@ display: block;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(125, 26, 190);
 }
-
-/* Button 3 Design */
 .btn3 {
     background-color: rgb(7, 153, 163);
     color: white;
