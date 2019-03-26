@@ -1,8 +1,10 @@
+/* Schriftart und Schriftgrösse generell */
 main {
     font-family: helvetica;
     font-size: 130%;
 }
 
+/* Dekoration Hauptteil */
 body {
     background: rgb(66, 170, 240);
     margin: 4% 20%;
@@ -11,12 +13,14 @@ body {
     border: 2px solid black;
 }
 
+/* Position Navigation */
 header {
     position: fixed;
     display: flex;
     right: 0;
 }
 
+/* Design Footer */
 #footerid {
     background: rgb(35, 110, 223);
     color: black;
@@ -31,61 +35,57 @@ header {
     border: 2px solid black;
 }
 
+/* Titel unterstrichen */
 h1, h2 {
     text-decoration: underline;
 }
 
+/* Seitenüberschrift grösser */
 .titel {
     font-size: 50px;
 }
 
+/* Design für Code */
 code {
-    background: grey;
+    background: rgb(0, 0, 0);
     font-style: italic;  
-    border: 2px solid black;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 7px;
     display: block;
+    margin: 0 4%;
+    color: white;
 }
 
-#underline {
+/* Wenn normaler Text unterstrichen sein soll */
+.underline {
     text-decoration: underline;
 }
 
+/* Links im Text oder Listen soll dick sein */
 p a, dd a {
     font-weight: bold;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-  
-.navbar a {
-    float: none;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+/* Navigationsleiste 15 Pixel von rechts anzeigen */
+nav {
+    margin-right: 15px;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
+/* Nav in einer Zeile anzeigen */
+.dropdown, .button {
 position: relative;
 display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdownmenü Inhalt versteckt */
 .dropdown-content {
 display: none;
 position: absolute;
 background-color: #f1f1f1;
 min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
 }
 
-/* Links inside the dropdown */
+/* Links im Dropdownmenü */
 .dropdown-content a {
 color: black;
 padding: 12px 16px;
@@ -93,112 +93,96 @@ text-decoration: none;
 display: block;
 }
 
-/* Change color of dropdown links on hover */
+/* Hintergrundfarbe im Dropdownmenü beim hovern verdunkeln */
 .dropdown-content a:hover {
     background-color: rgb(209, 209, 209);
 }
 
-/* Show the dropdown menu on hover */
+/* Inhalt beim hovern anzeigen im Dropdownmenü */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button,
-when the dropdown content is shown */
+/* Hintergrundfarbe von den Knöpfen beim hovern verdunkeln */
 .dropdown:hover .dropbtn0 {
     background-color: rgb(170, 0, 0);
+    box-shadow: 9px -9px 10px -4px  rgb(170, 0, 0);
 }
-
 .dropdown:hover .dropbtn1 {
     background-color: rgb(35, 143, 31);
+    box-shadow: 9px -9px 10px -4px rgb(35, 143, 31)
 }
-
 .dropdown:hover .dropbtn2 {
     background-color: rgb(91, 5, 126);
+    box-shadow: 9px -9px 10px -4px rgb(91, 5, 126);
+}
+.button:hover .btn3 {
+    cursor: pointer;
+    background-color: rgb(10, 129, 129);
+    box-shadow: 9px -9px 10px -4px rgb(10, 129, 129);
 }
 
-/* help */
-.dropdown:hover .btn3 {
-    cursor: grab;
-    background-color: rgb(11, 146, 146)
-}
-
-.navdropdown {
-    float: right;
-}
-
-/* Dropdown Button 0 */
+/* Dropdown Button 0 Design */
   .dropbtn0 {
     background-color: rgb(219, 13, 13);
     color: white;
     padding: 16px;
     font-size: 16px;
     border: 2px solid black;
+    box-shadow: 9px -9px 10px -4px rgb(219, 13, 13);
 }
 
-/* Dropdown Button 1 */
+/* Dropdown Button 1 Design */
 .dropbtn1 {
     background-color: rgb(29, 173, 0);
     color: white;
     padding: 16px;
     font-size: 16px;
     border: 2px solid black;
+    box-shadow: 9px -9px 10px -4px rgb(29, 173, 0);
 }
 
-/* Dropdown Button 2 */
+/* Dropdown Button 2 Design */
 .dropbtn2 {
     background-color: rgb(125, 26, 190);
     color: white;
     padding: 16px;
     font-size: 16px;
     border: 2px solid black;
+    box-shadow: 9px -9px 10px -4px rgb(125, 26, 190);
 }
 
-/* Button 3 */
+/* Button 3 Design */
 .btn3 {
     background-color: rgb(7, 153, 163);
     color: white;
     padding: 16px;
     font-size: 16px;
     border: 2px solid black;
+    box-shadow: 9px -9px 10px -4px rgb(7, 153, 163);
 }
 
-nav {
-    margin-right: 60px;
-}
-
-.dropdown-content0 {
-    display: none;
-    position: absolute;
-    background-color: rgb(167, 11, 11);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content1 {
-    display: none;
-    position: absolute;
-    background-color: rgb(13, 30, 129);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content2 {
-    display: none;
-    position: absolute;
-    background-color: rgb(209, 132, 43);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
+/* Links die nicht das Link Design übernehmen sollen */
 .notLinkDesign {
     text-decoration: none;
     color: currentColor;
 }
 
+/* Tabellentitel Design */
+th {
+    background: rgb(76, 125, 240);
+    border: 2px solid black;
+    padding: 2% 0;
+}
+
+/* Tabellenfelder Design */
+td {
+    padding: 2%;
+    border: 2px solid black;
+    background: rgb(58, 148, 247);
+}
+
+/* Media-Query 1100px */
 @media (max-width: 1100px) {
     body {
         margin: 0 10% 5% 10%;
@@ -208,8 +192,9 @@ nav {
     }
 }
 
+/* Media-Query 768px */
 @media (max-width: 768px) {
-    .dropdown {
+    .dropdown, .button {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -230,16 +215,25 @@ nav {
     .dropbtn0 {
         font-size: 10px;
         padding: 7px 4px;
+        box-shadow: none;
     }
 
     .dropbtn1 {
         font-size: 10px;
         padding: 7px 4px;
+        box-shadow: none;
     }
 
     .dropbtn2 {
         font-size: 10px;
         padding: 7px 4px;
+        box-shadow: none;
+    }
+
+    .btn3 {
+        font-size: 10px;
+        padding: 7px 4px;
+        box-shadow: none;
     }
 
     .B1 {
