@@ -189,13 +189,15 @@ td {
     text-align: center;
 }
 
+/* Stellt divs nebeneinander dar */
+div {
+    display: inline;
+}
+
 /* Media-Query 1100px */
 @media (max-width: 1100px) {
     body {
         margin: 0 10% 5% 10%;
-    }
-    .B1 {
-        max-width: 600px;
     }
 }
 
@@ -241,9 +243,5 @@ td {
         font-size: 10px;
         padding: 7px 4px;
         box-shadow: none;
-    }
-
-    .B1 {
-        max-width: 500px;
     }
 }
