@@ -5,7 +5,7 @@ main {
 
 body {
     background: rgb(66, 170, 240);
-    margin: 0 20% 5% 20%;
+    margin: 4% 20%;
     padding: 2%;
     box-shadow: 0px 0px 35px 35px rgba(62,85,230,1);
     border: 2px solid black;
@@ -117,6 +117,12 @@ when the dropdown content is shown */
     background-color: rgb(91, 5, 126);
 }
 
+/* help */
+.dropdown:hover .btn3 {
+    cursor: grab;
+    background-color: rgb(11, 146, 146)
+}
+
 .navdropdown {
     float: right;
 }
@@ -142,6 +148,15 @@ when the dropdown content is shown */
 /* Dropdown Button 2 */
 .dropbtn2 {
     background-color: rgb(125, 26, 190);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid black;
+}
+
+/* Button 3 */
+.btn3 {
+    background-color: rgb(7, 153, 163);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -179,8 +194,9 @@ nav {
     z-index: 1;
 }
 
-.B1 {
-    max-width: 800px;
+.notLinkDesign {
+    text-decoration: none;
+    color: currentColor;
 }
 
 @media (max-width: 1100px) {

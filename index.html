@@ -29,6 +29,7 @@
                     <a href="#05">Syntax</a>
                     <a href="#06">Funktionen</a>
                     <a href="#07">Validierung</a>
+                    <a href="#08">Unterschiede zu JS</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -39,8 +40,14 @@
                     <a href="#11">Verwendung</a>
                     <a href="#12">Praxis</a>
                     <a href="#13">jQuery</a>
+                    <a href="#14">Testprotokoll</a>
                 </div>
             </div>
+            <a class="notLinkDesign" class="dropdown" href="#15">
+                <button class="btn3">
+                    Glossar
+                </button>
+            </a>
         </nav>
     </header>
     <main>
@@ -69,16 +76,20 @@
                     Editor
                 </dt>
                 <dd>
-                    <b> Visual Studio Code </b> erleichtert das Schreiben mit HTML, CSS, PHP und JS erheblich.
+                    <a href="https://code.visualstudio.com/download">Visual Studio Code</a> erleichtert das Schreiben
+                    mit HTML, CSS, PHP und JS erheblich.
                 </dd>
                 <dt>
                     Browser
                 </dt>
                 <dd>
-                    <b> Google Chrome, Firefox, Opera, Internet Explorer </b> (vorinstalliert bei Windows), <b>
-                        Microsoft Edge </b> (vorinstalliert bei Windows) und <b> Safari </b> (bei Apple), all diese
-                    Browser sollten beim Testen verwendet werden, da diese sehr häufig von Endbenutzern gebraucht
-                    werden.
+                    <a href="https://www.google.com/chrome/">Google Chrome,</a> <a
+                        href="https://www.mozilla.org/de/firefox/">Firefox,</a> <a
+                        href="https://www.opera.com/de/download">Opera,</a> <a
+                        href="https://www.microsoft.com/de-ch/download/internet-explorer.aspx">Internet Explorer</a>
+                    (vorinstalliert bei Windows), Microsoft Edge (vorinstalliert bei Windows) und <b> Safari </b> (bei
+                    Apple), all diese Browser sollten beim Testen verwendet werden, da diese sehr häufig von
+                    Endbenutzern gebraucht werden.
                 </dd>
                 <dt>
                     Entwickler Tools
@@ -90,14 +101,17 @@
                     Webserver
                 </dt>
                 <dd>
-                    <b> XAMPP </b> ermöglicht das Erstellen von einem lokalen Webserver.
+                    <a href="https://www.apachefriends.org/de/download.html">XAMPP</a> ermöglicht das Erstellen von
+                    einem lokalen Webserver.
                 </dd>
                 <dt>
                     (Grafiken)
                 </dt>
                 <dd>
-                    <b> Adobe Photoshop </b> ist leider kostenpflichtig, ist aber auch nicht zwingend notwendig, den
-                    <b>GIMP</b> kann das Wichtigste und ist bereits vorinstalliert bei neueren Windows-Versionen.
+                    <a href="https://www.adobe.com/ch_de/products/photoshop.html">Adobe Photoshop</a> ist leider
+                    kostenpflichtig, ist aber auch nicht zwingend notwendig, den <a
+                        href="https://www.gimp.org/downloads/">GIMP</a> kann das Wichtigste
+                    und ist bereits vorinstalliert bei neueren Windows-Versionen.
                 </dd>
                 <dt>
                     Wissen
@@ -117,7 +131,9 @@
             aller HTML-Dokumente als Baumstruktur darstellt. Jeder "Ast" stellt somit zum Beispiel einen Absatz oder
             einen Titel dar. Für Browser bildet dies einen wichtigen Baustein für dynamische Webseiten.
             Ganz gut sehen kann man es im Chrome Developer Tool. Mit Windows öffnet man dies mit [F12], bei
-            Linux mit [Ctrl]+[Shift]+[J] und mit Apple geht es mit [⌘]+[Optionstaste]+[J].
+            Linux mit [Ctrl]+[Shift]+[J] und mit Apple geht es mit [⌘]+[Optionstaste]+[J]. <br> <br> Hier zeige ich noch
+            einen typischen D.O.M.-Baum, wie er auf einer Webseite aussehen könnte. <img src="dom.gif"
+                alt="D.O.M. Bild">
         </p>
         <h1 id="04">
             PHP erklärt
@@ -130,7 +146,10 @@
             Einleitung schon erwähnt ist PHP serverbasiert, das heisst, dass alle Prozesse auf dem Webserver ablaufen
             und somit die Clients weniger effektive Rechenleistung auf ihrem Gerät vorweisen müssen. <br> Ursprünglich
             war PHP nur eine Ansammlung von Perl-Skripten, die <b> Rasmus Lerdorf </b> 1995 entwickelt hat, um seinen
-            Online-Lebenslauf zu schreiben. Heute gilt dieser als Entwickler von PHP.
+            Online-Lebenslauf zu schreiben. Heute gilt dieser als Entwickler von PHP. <br> Da PHP serverseitig
+            funktioniert, können wir nicht einfach eine PHP Datei öffnen, sondern wir brauchen einen Webserver. Bei uns
+            reicht allerdings auch XAMPP um PHP zu testen, da es wesentlich einfacher zu benutzen ist und auch nichts
+            kostet.
         </p>
         <h2 id="05">
             Aufbau Befehl (Syntax)
@@ -161,7 +180,12 @@
                 <dd>
                     Mit diesem Befehl kann das aktuelle Datum angegeben werden.
                 </dd>
-            </dl>
+            </dl> <br> <br>
+            Was ich oben schon kurz angeschnitten habe, mit dem method-Attribut, will ich nochmals kurz vertiefen. Man
+            kann bekanntlich mit <code>method="post"</code> Inhalte auf ein anderes File(meistens .php) "posten". Das
+            bietet sich hauptsächlich bei Formularen an. <br> <br> Die andere Möglichkeit, ist <code>method="get"</code>
+            bzw. man kann dieses Attribut komplett weglassen, dann ist die Methode auch "get". Wenn man diese Methode
+            wählt, wird der Formularinhalt der URL angehenkt, das wohl bekannteste Beispiel ist hierbei Google.
         </p>
         <h2 id="07">
             Validierung
@@ -240,9 +264,22 @@
                 </li>
             </ul>
             Immer das was vor dem Bindestrich ist, ist der Attributwert für das <code> required pattern="" </code>
-            Attribut.
+            Attribut. Mit dieser Methode kann man nahezu jeden Fall der Validierung abdecken, es gibt nur einen kleinen
+            Haken bei der Sache. Nämlich wenn man das Formular nicht sinngemäss ausfüllt, sprich es Validierungsfehler
+            gibt, dann sind die Fehlermeldungen sehr unkonkret und daher nicht besonders benutzerfreundlich.
         </p>
-
+        <h2 id="08">
+            Unterschiede von PHP zu JS/jQuery
+        </h2>
+        <p>
+            Mit beiden Skriptsprachen kann man mehr oder weniger das Gleiche machen, jedoch muss man manchmal eine
+            Bestimmte benutzen oder manchmal bietet sich eine einfach eher an. <br> <br> Die Syntax der beiden
+            Skriptsprachen
+            unterscheidet sich mal mehr und mal weniger. <br> <br> Beim Definieren
+            und Ausgeben einer Variable sieht es bei PHP so aus: <code>$varName = "test"; <br> echo $varName;</code>
+            <br> <br> Und bei jQuery dann folgendermassen:
+            <code>var varName = "test"; <br> document.write(varName);</code>
+        </p>
         <h1 id="09">
             JS erklärt
         </h1>
@@ -251,9 +288,11 @@
             Fall
             mit Java verwechseln, dies ist etwas komplett Anderes und darum soll es nicht gehen. Um wieder auf
             JavaScript zurückzukommen, JavaScript ist ebenfalls eine Skriptsprache und sie wurde ebenfalls in 1995
-            entwickelt. JavaScript hatte die Absicht Webseiten dynamischer zu machen, die selbe Aufgabe hat es auch heute
+            entwickelt. JavaScript hatte die Absicht Webseiten dynamischer zu machen, die selbe Aufgabe hat es auch
+            heute
             noch. Das einzige was heute noch dazugekommen ist, ist, dass man JavaScript auch auf Servern und
-            Microcontrollern vorfinden kann. <br> <br> JavaScript wurde früher hauptsächlich clientseitig eingesetzt. JavaScript
+            Microcontrollern vorfinden kann. <br> <br> JavaScript wurde früher hauptsächlich clientseitig eingesetzt.
+            JavaScript
             ermöglicht aber beispielsweise mit dem Framework Node.js und als JScript bzw. JScript.NET auch serverseitige
             Anwendungen. <br> <br> Die Sprache wird auch als Skriptsprache für Spiele und Anwendungsprogramme
             eingesetzt. Dies ist weil der Sprachkern nur wenige Objekte enthält, deswegen kann das Skript relativ klein
@@ -283,9 +322,7 @@
         </h2>
         <p>
             Die Syntax von JavaScript ähnelt jener den C-orientierten Programmiersprachen, wozu auch Java gehört. Trotz
-            der Namensähnlichkeit und Syntax-Verwandschaft, hat JavaScript nur geringe Gemeinsamkeiten mit Java,
-            beispielsweise wird Vererbung in JavaScript, anders als in Java, nicht durch Klassen, sondern durch
-            Prototypen unterstützt.
+            der Namensähnlichkeit und Syntax-Verwandschaft, hat JavaScript nur geringe Gemeinsamkeiten mit Java.
         </p>
         <h2 id="11">
             Verwendung
@@ -398,7 +435,11 @@
             der 10'000 meistbesuchten Webseiten haben Anfangs 2018 jQuery im Code. <br> Der Erfinder von jQuery ist John
             Resig, dieser hat sich zwar inzwischen aus der aktiven Entwicklungsarbeit zurückgezogen und diese an das
             jQuery Team übergeben, aber dort arbeitet er weiterhin als Ehrenmitglied und selbstverständlich kann er auch
-            als Entwickler und somit Fachexperte aushelfen.
+            als Entwickler und somit Fachexperte aushelfen. <br> <br> Wenn man jQuery nutzen will, sollte man immer das
+            aktuellste CDN verwenden, da diese auch eher für neue Browser optimiert sind, man findet die
+            jQuery-Libraries <a href="https://code.jquery.com/">hier.</a> <br> <br> Wenn man mit jQuery durchstarten
+            will, sollte man definitiv <a href="https://www.html-seminar.de/jquery-tutorial.htm">diese Webseite</a>
+            anschauen.
         </p>
         <h2>
             jQuery Einsatzgebiet
@@ -425,6 +466,22 @@
                 </li>
             </ul>
         </p>
+        <h1 id="14">
+            Testprotokoll
+        </h1>
+        <p>
+            In jedem seriösen Projekt, in unserem Falle die Webseite, darf am Ende das Testen nicht fehlen. Auch wenn es
+            Vielen nicht gefällt, ist es dennoch ein sehr wichtiger Schritt. Man identifiziert die Fehler lieber
+            frühzeitig, da das Beheben von Fehlern nachdem die Webseite online ist, deutlich mühsamer ist. <br> <br> Ich
+            verlinke euch <a
+                href="http://www.hermes.admin.ch/szenarien/szenario_50_Alles/scenario/de/ergebnis_testprotokoll.html">hier</a>
+            eine Testprokollvorlage von Hermes, welches Testergebnisse gemäss den im Testkonzept definierten
+            Fehlerklassen bewertet.
+        </p>
+        <h1 id="15">
+            Glossar
+        </h1>
+        
     </main>
     <footer id="footerid">
         Website von Robin Ehrbar
