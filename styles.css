@@ -1,13 +1,13 @@
 /* Schriftart und Schriftgrösse generell */
 main {
     font-family: helvetica;
-    font-size: 130%;
+    font-size: 115%;
 }
 
 /* Dekoration Hauptteil */
 body {
     background: rgb(66, 170, 240);
-    margin: 4% 20%;
+    margin: 5% 20%;
     padding: 2%;
     box-shadow: 0px 0px 35px 35px rgba(62,85,230,1);
     border: 2px solid black;
@@ -16,7 +16,6 @@ body {
 /* Position Navigation */
 header {
     position: fixed;
-    display: flex;
     right: 0;
 }
 
@@ -59,6 +58,7 @@ code {
     display: block;
     margin: 0 4%;
     color: white;
+    padding: 7px;
 }
 
 /* Wenn normaler Text unterstrichen sein soll */
@@ -88,6 +88,7 @@ display: none;
 position: absolute;
 background-color: #f1f1f1;
 min-width: 160px;
+z-index: 11;
 }
 
 /* Links im Dropdownmenü */
@@ -135,6 +136,7 @@ display: block;
     font-size: 16px;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(219, 13, 13);
+    z-index: 10;
 }
 .dropbtn1 {
     background-color: rgb(29, 173, 0);
@@ -143,6 +145,7 @@ display: block;
     font-size: 16px;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(29, 173, 0);
+    z-index: 10;
 }
 .dropbtn2 {
     background-color: rgb(125, 26, 190);
@@ -151,6 +154,7 @@ display: block;
     font-size: 16px;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(125, 26, 190);
+    z-index: 10;
 }
 .btn3 {
     background-color: rgb(7, 153, 163);
@@ -159,10 +163,11 @@ display: block;
     font-size: 16px;
     border: 2px solid black;
     box-shadow: 9px -9px 10px -4px rgb(7, 153, 163);
+    z-index: 10;
 }
 
-/* Links die nicht das Link Design übernehmen sollen */
-.notLinkDesign {
+/* Link soll nicht das Link Design übernehmen */
+button a {
     text-decoration: none;
     color: currentColor;
 }
@@ -171,7 +176,7 @@ display: block;
 th {
     background: rgb(76, 125, 240);
     border: 2px solid black;
-    padding: 2% 0;
+    padding: 2%;
     width: 50%;
 }
 
@@ -188,10 +193,18 @@ div {
     display: inline;
 }
 
+/* Ganze Fläche anklickbar */
+.gFa {
+    width: 100%;
+} 
+
 /* Media-Query 1100px */
 @media (max-width: 1100px) {
     body {
-        margin: 3% 10%;
+        margin: 3% 10% 10% 10%;
+    }
+    img {
+        width: 100%;
     }
 }
 
@@ -201,39 +214,16 @@ div {
         display: flex;
         flex-direction: column;
         width: 100%;
-        box-sizing: border-box;
         margin: 2px 10px 2px 2px;
-        text-align: left;
     }
-
     body {
         font-size: 60%;
-        margin: 0 3% 6% 3%;
+        margin: 3% 5% 15% 5%;
     }
-
     .titel {
         font-size: 30px;
     }
-
-    .dropbtn0 {
-        font-size: 10px;
-        padding: 7px 4px;
-        box-shadow: none;
-    }
-
-    .dropbtn1 {
-        font-size: 10px;
-        padding: 7px 4px;
-        box-shadow: none;
-    }
-
-    .dropbtn2 {
-        font-size: 10px;
-        padding: 7px 4px;
-        box-shadow: none;
-    }
-
-    .btn3 {
+    .dropbtn0, .dropbtn1, .dropbtn2, .btn3 {
         font-size: 10px;
         padding: 7px 4px;
         box-shadow: none;
